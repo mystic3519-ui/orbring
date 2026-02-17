@@ -4,20 +4,30 @@
 using namespace geode::prelude;
 
 class $modify(GameObject) {
-    // This hides it when the orb is first created
+    // Hide the ring when the orb is first loaded
     void setupCustomSprites() {
         GameObject::setupCustomSprites();
         if (this->m_orbRing) {
             this->m_orbRing->setVisible(false);
+            this->m_orbRing->setOpacity(0);
         }
     }
 
-    // This ensures it stays hidden when you get close to the orb
+    // GD 2.2074 updates visuals constantly; we force hide it here too
+    void update(float dt) {
+        GameObject::update(dt);
+        if (this->m_orbRing) {
+            this->m_orbRing->setVisible(false);
+            this->m_orbRing->setOpacity(0);
+        }
+    }
+
+    // Targets the "active" ring that appears when in range
     void activateObject() {
         GameObject::activateObject();
         if (this->m_orbRing) {
             this->m_orbRing->setVisible(false);
-            this->m_orbRing->setOpacity(0); // Extra safety
+            this->m_orbRing->setOpacity(0);
         }
     }
 };
