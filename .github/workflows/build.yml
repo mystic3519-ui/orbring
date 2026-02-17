@@ -38,7 +38,7 @@ jobs:
 
     steps:
       - name: Combine
-        uses: geode-sdk/build-geode-mod/combine@main
+        uses: geode-sdk/build-geode-mod/combine@v2
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
