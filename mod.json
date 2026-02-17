@@ -1,13 +1,9 @@
 {
 	"geode": "3.3.0",
 	"version": "v1.0.0",
-	"id": "yourname.no_orb_rings",
+	"id": "mist.no_orb_rings",
 	"name": "No Orb Rings",
 	"developer": "YourName",
-	"description": "Removes active orb rings for GD 2.2074.",
-	"repository": "https://github.com",
-	"settings": {},
-	"resources": {
-		"sprites": []
-	}
+	"description": "haahaa heehee peepeepoopoo",
+	"repository": "https://github.com"
 }
